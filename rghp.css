@@ -1,0 +1,140 @@
+/* Réinitialisation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ===============================
+   HEADER
+   =============================== */
+.header {
+  width: 100%;                /* Le header prend toute la largeur */
+  display: flex;              /* Active le modèle flexbox */
+  justify-content: center;    /* Centre le nav horizontalement dans le header */
+  padding: 10px 0; 
+  background-color: aqua;           /* Espace vertical */
+}
+
+/* Barre de navigation */
+.navbar {
+  width: 80%;                 /* Zone interne à 80% du header */
+  display: flex;              /* Organisation en ligne */
+  justify-content: flex-end;  /* Aligne les liens à droite */
+  align-items: center;        /* Centrage vertical */
+  gap: 20px;                  /* Espacement entre les liens */
+}
+
+/* Liens du header */
+.navbar a {
+  text-decoration: none;      /* Supprime le soulignement */
+  color: #70757a;             /* Gris clair du guide de style */
+  font-size: 16px;            /* Taille de texte */
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  padding: 6px 10px;          /* Un peu d'espace interne pour le survol */
+  border-radius: 4px;         /* Coins légèrement arrondis */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Effet au survol */
+.navbar a:hover {
+  background-color: #f1f3f4;  /* Fond gris clair au survol */
+  color: #202124;             /* Texte plus foncé */
+}
+
+/* ===============================
+   MAIN GLOBAL
+   =============================== */
+.main-content {
+  display: flex;
+  flex-direction: column;      /* éléments empilés (logo, barre, boutons) */
+  align-items: center;         /* centre horizontalement */
+  justify-content: center;     /* centre verticalement */
+  height: 50vh;                /* occupe 85% de la hauteur de la fenêtre */
+  width: 100%;                 /* pleine largeur */
+  text-align: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: yellow;
+}
+
+/* ===============================
+   LOGO GOOGLE
+   =============================== */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;                    /* petit espace entre les lettres */
+  font-size: 100px;
+  font-weight: 800;
+  width: 40%;                  /* largeur du logo */
+}
+
+/* Couleurs du logo selon le style guide */
+.blue   { color: #4285F4; }   /* Bleu Google */
+.red    { color: #EA4335; }   /* Rouge Google */
+.yellow { color: #FBBC05; }   /* Jaune Google */
+.green  { color: #34A853; }   /* Vert Google */
+
+/* ===============================
+   BARRE DE RECHERCHE
+   =============================== */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.search-bar {
+  width: 150%;                  /* légèrement plus large que le logo */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 45px;
+  border: 1px solid #dfe1e5;
+  border-radius: 25px;
+  font-size: 18px;
+  outline: none;               /* enlève la bordure bleue par défaut */
+  transition: all 0.2s ease;
+}
+
+/* Effet quand on clique dans le champ */
+.search-bar input:focus {
+  border-color: #4285F4;       /* bordure bleue Google */
+  box-shadow: 0 0 3px #4285F4; /* petit halo bleu */
+  cursor: text;                /* curseur I */
+}
+
+/* ===============================
+   BOUTONS DE RECHERCHE
+   =============================== */
+.search-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.search-buttons button {
+  background-color: #f8f9fa;   /* gris clair par défaut */
+  color: #202124;              /* texte noir foncé */
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Effet au survol */
+.search-buttons button:hover {
+  background-color: #f1f3f4;   /* fond plus clair */
+  color: #34A853;              /* vert Google */
+  border: 1px solid #dadce0;   /* contour léger */
+}
+
+
