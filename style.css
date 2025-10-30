@@ -1,0 +1,142 @@
+/* MAIN (logo + barre + boutons) */
+.main-content {
+  display: flex;
+  flex-direction: column;         /* empile les éléments */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+/* LOGO GOOGLE */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 100px;
+  font-weight: 800;
+  width: 40%;
+}
+
+/* Couleurs Google */
+.blue   { color: #4285F4; }
+.red    { color: #EA4335; }
+.yellow { color: #FBBC05; }
+.green  { color: #34A853; }
+
+/* BARRE DE RECHERCHE */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.search-bar {
+  width: 200%;                     /* plus large que le logo */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 15px 45px;
+  border: 1px solid #dfe1e5;
+  border-radius: 25px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Effet au clic (focus) */
+.search-bar input:focus {
+  border-color: #4285F4;
+  box-shadow: 0 0 3px #4285F4;
+  cursor: text;
+}
+
+/* BOUTONS */
+.search-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.search-buttons button {
+  background-color: #f8f9fa;      /* gris clair */
+  color: #202124;                 /* texte sombre */
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-buttons button:hover {
+  background-color: #f1f3f4;
+  color: #34A853;                 /* vert Google */
+  border: 1px solid #dadce0;
+}
+
+/* FOOTER (en colonne) */
+.footer {
+  background-color: #f1f3f4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #70757a;
+}
+
+/* Section des liens */
+.footer-links {
+  display: flex;
+  flex-direction: column;          /* listes empilées */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Style général des listes */
+.footer-links ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Première liste (localisation) ===== */
+.location li {
+  list-style: none;                /* supprime les puces */
+}
+
+/* Tirets pour le 2e et 3e élément */
+.location li:nth-child(2)::before,
+.location li:nth-child(3)::before {
+  content: "- ";
+  color: #70757a;
+}
+
+/* Deuxième liste (autres liens) */
+.autres li {
+  list-style: none;                /* supprime d’abord tout */
+}
+
+/* Points pour les 2e et 3e éléments */
+.autres li:nth-child(2),
+.autres li:nth-child(3) {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* Effet au survol */
+.footer-links li:hover {
+  color: #202124;
+  cursor: pointer;
+}
