@@ -9,7 +9,7 @@ body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   background-color: #fff;
   color: #202124;
-  height: 70vh;
+  height: 67vh;
   display: flex;
   flex-direction: column;
 }
@@ -90,7 +90,6 @@ input {
 input:focus {
   border-color: #4285F4;
   box-shadow: 0 0 5px #4285F4;
-  cursor: text;
 }
 
 input:hover {
@@ -172,4 +171,44 @@ button:hover {
 .autres li:nth-child(3) {
   list-style-type: disc;
   list-style-position: inside;
+}
+/* 🌐==== MEDIA QUERIES SIMPLIFIÉES ==== */
+
+/* Écrans moyens et petits (jusqu’à 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Centre le menu horizontalement */
+    width: 100%;             /* Prend toute la largeur du header */
+    gap: 20px;               /* Espacement régulier entre les liens */
+  }
+
+  .navbar a {
+    font-size: 15px;
+    padding: 4px 6px;
+  }
+}
+
+/* Petits écrans (425px et moins) */
+@media (max-width: 425px) {
+  .navbar {
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
+
+/* Très petits écrans (375px et moins) */
+@media (max-width: 375px) {
+  .navbar {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 13px;
+  }
 }
